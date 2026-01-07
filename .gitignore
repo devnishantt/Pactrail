@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+.wrangler/
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*.log
+*.tgz
+*.tar.gz
+.DS_Store
+.history-plan.json
