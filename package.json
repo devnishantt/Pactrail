@@ -1,0 +1,47 @@
+{
+  "name": "pactrail",
+  "version": "0.1.0",
+  "description": "API contract checks, conservative OpenAPI change detection, and deterministic fixture testing",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
+  },
+  "bin": {
+    "pactrail": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "provenance.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "check": "npm run typecheck && npm test && npm run build",
+    "prepack": "npm run build",
+    "test:cli": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.8.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "@vitest/coverage-v8": "^5.0.5",
+    "typescript": "^5.9.2",
+    "vitest": "^5.0.5"
+  }
+}
