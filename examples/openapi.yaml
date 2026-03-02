@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: Bookshop API
+  version: 1.0.0
+paths:
+  /books/{id}:
+    get:
+      operationId: getBook
+      responses:
+        '200':
+          description: Book found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+        '404':
+          description: Book not found
+components:
+  schemas:
+    Book:
+      type: object
+      required: [id, title]
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        title:
+          type: string
+          minLength: 1
