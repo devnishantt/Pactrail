@@ -1,0 +1,10 @@
+[
+  {
+    "name": "book found",
+    "method": "GET",
+    "path": "/books/{id}",
+    "status": 200,
+    "body": { "id": 1, "title": "The Pragmatic Programmer" }
+  },
+  { "name": "missing book", "method": "GET", "path": "/books/{id}", "status": 404 }
+]
