@@ -1,0 +1,15 @@
+{
+  "name": "unicodeLength: boundary 0",
+  "schema": {
+    "type": "string",
+    "minLength": 1,
+    "maxLength": 1
+  },
+  "accepts": [
+    "🙂"
+  ],
+  "rejects": [
+    "",
+    "🙂🙂"
+  ]
+}
