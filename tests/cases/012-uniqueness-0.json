@@ -1,0 +1,34 @@
+{
+  "name": "uniqueness: boundary 0",
+  "schema": {
+    "type": "array",
+    "uniqueItems": true,
+    "items": {
+      "type": "object"
+    }
+  },
+  "accepts": [
+    [
+      {
+        "id": 0
+      },
+      {
+        "id": 1
+      }
+    ],
+    []
+  ],
+  "rejects": [
+    [
+      {
+        "id": 0
+      },
+      {
+        "id": 0
+      }
+    ],
+    [
+      0
+    ]
+  ]
+}
