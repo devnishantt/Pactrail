@@ -1,0 +1,30 @@
+{
+  "name": "required: boundary 0",
+  "schema": {
+    "type": "object",
+    "required": [
+      "field0"
+    ],
+    "properties": {
+      "field0": {
+        "type": "integer"
+      }
+    },
+    "additionalProperties": false
+  },
+  "accepts": [
+    {
+      "field0": 0
+    }
+  ],
+  "rejects": [
+    {},
+    {
+      "field0": "0"
+    },
+    {
+      "field0": 0,
+      "extra": true
+    }
+  ]
+}
