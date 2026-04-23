@@ -1,0 +1,23 @@
+{
+  "name": "propertyNames: boundary 0",
+  "schema": {
+    "type": "object",
+    "propertyNames": {
+      "pattern": "^field0_[a-z]+$"
+    }
+  },
+  "accepts": [
+    {
+      "field0_name": 1
+    },
+    {}
+  ],
+  "rejects": [
+    {
+      "invalid": 1
+    },
+    {
+      "field0_1": 1
+    }
+  ]
+}
