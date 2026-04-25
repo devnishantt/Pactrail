@@ -1,0 +1,26 @@
+{
+  "name": "patternProperties: boundary 0",
+  "schema": {
+    "type": "object",
+    "patternProperties": {
+      "^num0_": {
+        "type": "integer"
+      }
+    },
+    "additionalProperties": false
+  },
+  "accepts": [
+    {
+      "num0_x": 0
+    },
+    {}
+  ],
+  "rejects": [
+    {
+      "num0_x": "bad"
+    },
+    {
+      "other": 0
+    }
+  ]
+}
