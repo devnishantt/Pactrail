@@ -1,0 +1,15 @@
+{
+  "name": "multipleOf: boundary 1",
+  "schema": {
+    "type": "integer",
+    "multipleOf": 3
+  },
+  "accepts": [
+    0,
+    9
+  ],
+  "rejects": [
+    1,
+    10
+  ]
+}
