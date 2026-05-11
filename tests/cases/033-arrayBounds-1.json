@@ -1,0 +1,33 @@
+{
+  "name": "arrayBounds: boundary 1",
+  "schema": {
+    "type": "array",
+    "minItems": 2,
+    "maxItems": 3,
+    "items": {
+      "type": "integer"
+    }
+  },
+  "accepts": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ]
+  ],
+  "rejects": [
+    [
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ]
+}
