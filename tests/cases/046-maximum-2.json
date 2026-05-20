@@ -1,0 +1,15 @@
+{
+  "name": "maximum: boundary 2",
+  "schema": {
+    "type": "number",
+    "maximum": 2
+  },
+  "accepts": [
+    2,
+    1.5
+  ],
+  "rejects": [
+    2.5,
+    null
+  ]
+}
