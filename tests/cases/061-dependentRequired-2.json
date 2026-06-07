@@ -1,0 +1,23 @@
+{
+  "name": "dependentRequired: boundary 2",
+  "schema": {
+    "type": "object",
+    "dependentRequired": {
+      "a2": [
+        "b2"
+      ]
+    }
+  },
+  "accepts": [
+    {},
+    {
+      "a2": 1,
+      "b2": 2
+    }
+  ],
+  "rejects": [
+    {
+      "a2": 1
+    }
+  ]
+}
