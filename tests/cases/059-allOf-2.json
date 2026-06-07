@@ -1,0 +1,22 @@
+{
+  "name": "allOf: boundary 2",
+  "schema": {
+    "allOf": [
+      {
+        "type": "integer",
+        "minimum": 2
+      },
+      {
+        "maximum": 4
+      }
+    ]
+  },
+  "accepts": [
+    2,
+    4
+  ],
+  "rejects": [
+    1,
+    5
+  ]
+}
