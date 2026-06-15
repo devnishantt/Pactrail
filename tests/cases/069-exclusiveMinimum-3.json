@@ -1,0 +1,15 @@
+{
+  "name": "exclusiveMinimum: boundary 3",
+  "schema": {
+    "type": "number",
+    "exclusiveMinimum": 3
+  },
+  "accepts": [
+    4,
+    3.1
+  ],
+  "rejects": [
+    3,
+    2
+  ]
+}
