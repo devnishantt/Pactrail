@@ -1,0 +1,16 @@
+{
+  "name": "stringLength: boundary 3",
+  "schema": {
+    "type": "string",
+    "minLength": 4,
+    "maxLength": 6
+  },
+  "accepts": [
+    "aaaa",
+    "aaaaaa"
+  ],
+  "rejects": [
+    "aaa",
+    "aaaaaaa"
+  ]
+}
