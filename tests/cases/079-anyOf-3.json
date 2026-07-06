@@ -1,0 +1,22 @@
+{
+  "name": "anyOf: boundary 3",
+  "schema": {
+    "anyOf": [
+      {
+        "type": "integer",
+        "minimum": 3
+      },
+      {
+        "const": "fallback-3"
+      }
+    ]
+  },
+  "accepts": [
+    3,
+    "fallback-3"
+  ],
+  "rejects": [
+    2,
+    "no"
+  ]
+}
