@@ -1,0 +1,17 @@
+{
+  "name": "not: boundary 3",
+  "schema": {
+    "type": "integer",
+    "not": {
+      "const": 3
+    }
+  },
+  "accepts": [
+    2,
+    4
+  ],
+  "rejects": [
+    3,
+    "3"
+  ]
+}
