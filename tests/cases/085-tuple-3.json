@@ -1,0 +1,36 @@
+{
+  "name": "tuple: boundary 3",
+  "schema": {
+    "type": "array",
+    "prefixItems": [
+      {
+        "const": 3
+      },
+      {
+        "type": "string"
+      }
+    ],
+    "minItems": 2,
+    "items": false
+  },
+  "accepts": [
+    [
+      3,
+      "ok"
+    ]
+  ],
+  "rejects": [
+    [
+      3,
+      1
+    ],
+    [
+      3
+    ],
+    [
+      3,
+      "ok",
+      true
+    ]
+  ]
+}
