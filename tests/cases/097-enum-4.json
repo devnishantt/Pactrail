@@ -1,0 +1,18 @@
+{
+  "name": "enum: boundary 4",
+  "schema": {
+    "enum": [
+      "open-4",
+      "closed-4",
+      null
+    ]
+  },
+  "accepts": [
+    "open-4",
+    null
+  ],
+  "rejects": [
+    "unknown-4",
+    4
+  ]
+}
