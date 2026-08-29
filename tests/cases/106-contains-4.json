@@ -1,0 +1,30 @@
+{
+  "name": "contains: boundary 4",
+  "schema": {
+    "type": "array",
+    "contains": {
+      "const": 4
+    },
+    "minContains": 1,
+    "maxContains": 1
+  },
+  "accepts": [
+    [
+      4
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "rejects": [
+    [],
+    [
+      5
+    ],
+    [
+      4,
+      4
+    ]
+  ]
+}
