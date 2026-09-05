@@ -1,0 +1,36 @@
+{
+  "name": "tuple: boundary 4",
+  "schema": {
+    "type": "array",
+    "prefixItems": [
+      {
+        "const": 4
+      },
+      {
+        "type": "string"
+      }
+    ],
+    "minItems": 2,
+    "items": false
+  },
+  "accepts": [
+    [
+      4,
+      "ok"
+    ]
+  ],
+  "rejects": [
+    [
+      4,
+      1
+    ],
+    [
+      4
+    ],
+    [
+      4,
+      "ok",
+      true
+    ]
+  ]
+}
