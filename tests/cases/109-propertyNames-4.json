@@ -1,0 +1,23 @@
+{
+  "name": "propertyNames: boundary 4",
+  "schema": {
+    "type": "object",
+    "propertyNames": {
+      "pattern": "^field4_[a-z]+$"
+    }
+  },
+  "accepts": [
+    {
+      "field4_name": 1
+    },
+    {}
+  ],
+  "rejects": [
+    {
+      "invalid": 1
+    },
+    {
+      "field4_1": 1
+    }
+  ]
+}
