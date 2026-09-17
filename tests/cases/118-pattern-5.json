@@ -1,0 +1,15 @@
+{
+  "name": "pattern: boundary 5",
+  "schema": {
+    "type": "string",
+    "pattern": "^ID5-[0-9]+$"
+  },
+  "accepts": [
+    "ID5-1",
+    "ID5-42"
+  ],
+  "rejects": [
+    "ID5-x",
+    "prefix-ID5-1"
+  ]
+}
