@@ -1,0 +1,30 @@
+{
+  "name": "required: boundary 5",
+  "schema": {
+    "type": "object",
+    "required": [
+      "field5"
+    ],
+    "properties": {
+      "field5": {
+        "type": "integer"
+      }
+    },
+    "additionalProperties": false
+  },
+  "accepts": [
+    {
+      "field5": 5
+    }
+  ],
+  "rejects": [
+    {},
+    {
+      "field5": "5"
+    },
+    {
+      "field5": 5,
+      "extra": true
+    }
+  ]
+}
