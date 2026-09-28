@@ -1,0 +1,23 @@
+{
+  "name": "oneOf: boundary 5",
+  "schema": {
+    "oneOf": [
+      {
+        "type": "integer",
+        "minimum": 5
+      },
+      {
+        "type": "integer",
+        "maximum": 5
+      }
+    ]
+  },
+  "accepts": [
+    4,
+    6
+  ],
+  "rejects": [
+    5,
+    "no"
+  ]
+}
