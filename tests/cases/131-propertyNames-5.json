@@ -1,0 +1,23 @@
+{
+  "name": "propertyNames: boundary 5",
+  "schema": {
+    "type": "object",
+    "propertyNames": {
+      "pattern": "^field5_[a-z]+$"
+    }
+  },
+  "accepts": [
+    {
+      "field5_name": 1
+    },
+    {}
+  ],
+  "rejects": [
+    {
+      "invalid": 1
+    },
+    {
+      "field5_1": 1
+    }
+  ]
+}
