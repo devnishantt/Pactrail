@@ -1,0 +1,15 @@
+{
+  "name": "exclusiveMaximum: boundary 6",
+  "schema": {
+    "type": "number",
+    "exclusiveMaximum": 6
+  },
+  "accepts": [
+    5,
+    5.9
+  ],
+  "rejects": [
+    6,
+    7
+  ]
+}
