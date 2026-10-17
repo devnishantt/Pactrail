@@ -1,0 +1,53 @@
+{
+  "name": "arrayBounds: boundary 6",
+  "schema": {
+    "type": "array",
+    "minItems": 7,
+    "maxItems": 8,
+    "items": {
+      "type": "integer"
+    }
+  },
+  "accepts": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  ],
+  "rejects": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ]
+}
