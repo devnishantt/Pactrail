@@ -1,5 +1,7 @@
 # Pactrail
 
+[![CI](https://github.com/devnishantt/Pactrail/actions/workflows/ci.yml/badge.svg)](https://github.com/devnishantt/Pactrail/actions/workflows/ci.yml)
+
 A small TypeScript library and CLI for API contract checks. Built with Zod, Ajv, YAML, and Vitest. Node.js 22.12+, 24, or 26+; ESM only.
 
 > **History disclosure:** This original project was generated with AI assistance on **October 30, 2026**. The 173 commit dates from January 1 through October 29, 2026 are a **synthetic schedule**, not evidence of work performed on those dates. Each commit repeats that disclosure. See [`provenance.json`](./provenance.json). No code was imported from another repository.
@@ -12,7 +14,7 @@ A small TypeScript library and CLI for API contract checks. Built with Zod, Ajv,
 - Conservative directional request/response change detection with breaking, review, and additive findings.
 - Deterministic response fixtures with useful issue paths; JSON and YAML input.
 - CLI with machine-readable output and explicit exit codes.
-- Vitest unit/regression tests and a GitHub Actions template for Node.js 22 and 24 (activation required).
+- Vitest unit/regression tests and GitHub Actions CI on Node.js 22 and 24.
 
 ## Setup
 
@@ -87,7 +89,7 @@ The comparator is deliberately conservative, **not a complete proof of backward 
 
 ## CI integration
 
-The included **inactive template** at `ci/github-actions.yml` builds, typechecks, runs tests and fixtures, and checks package contents. The connected GitHub App could push source code but lacked permission to create workflows. CI is therefore **not activated**. To enable it, add this template as `.github/workflows/ci.yml` through GitHub's web editor, or grant the app workflow permission and push it there. Local verification passed 639 tests and 13 CLI smoke checks; the dependency audit reported zero vulnerabilities at creation.
+GitHub Actions runs [`.github/workflows/ci.yml`](.github/workflows/ci.yml) on every push to `main`, on pull requests, and on manual dispatch. On Node.js 22 and 24 it typechecks, runs the full Vitest suite (639 tests), builds, runs the 13 CLI smoke checks and the example fixtures, and checks package contents with `npm pack --dry-run`.
 
 To compare your own baseline and candidate in CI:
 
@@ -124,7 +126,7 @@ src/              Library, models, comparator, CLI, file reader
 examples/         Working Bookshop contract, fixtures, breaking candidate
 tests/            Unit tests and independently named schema boundary cases
 scripts/          Deterministic case generator and subprocess CLI smoke tests
-ci/               Inactive Node.js GitHub Actions template
+.github/workflows GitHub Actions CI (Node.js 22 and 24)
 ```
 
 ```sh
@@ -136,10 +138,10 @@ Each regression case declares a schema and explicit accepted/rejected values. Th
 
 ## Data, paths, and deployment
 
-- Repository: https://github.com/devnishantt/contractkit (can be renamed independently of the package).
+- Repository: https://github.com/devnishantt/Pactrail.
 - Runtime data: in-process input documents and results only; no database, persistent service, or cloud storage is required.
 - Public entry points: the package exports and `pactrail validate`, `pactrail diff`, and `pactrail fixtures` commands above. There are no HTTP URIs or hosted API endpoints.
-- Deployment: GitHub source and inactive CI template; no website deployment and no npm publication. GitHub Actions activation is pending workflow permission or manual setup.
+- Deployment: GitHub source with active GitHub Actions CI; no website deployment and no npm publication.
 - Next steps: full OpenAPI conformance validation, richer parameter compatibility rules, direction-aware payload schemas, and sandboxed validation for untrusted inputs.
 
 ## License
